@@ -1,4 +1,4 @@
-set(LIB_NAME scanner_test_lib)
+set(EXE_NAME scanner_tests)
 
 ###################
 # Unit test files #
@@ -15,13 +15,21 @@ set(TEST_FILES
 set(TEST_LINK_LIBRARIES
         gmock
         gtest
+        gtest_main
         scanner_lib
 )
 
+#####################
+# Create executable #
+#####################
+
+add_executable(${EXE_NAME} ${TEST_FILES})
+target_include_directories(${EXE_NAME} PRIVATE ${INCLUDE_DIRS})
+target_link_libraries(${EXE_NAME} PRIVATE ${TEST_LINK_LIBRARIES})
+
 ##################
-# Create library #
+# Discover tests #
 ##################
 
-add_library(${LIB_NAME} ${TEST_FILES})
-target_include_directories(${LIB_NAME} PRIVATE ${INCLUDE_DIRS})
-target_link_libraries(${LIB_NAME} PRIVATE ${TEST_LINK_LIBRARIES})
+include(GoogleTest)
+gtest_discover_tests(${EXE_NAME})

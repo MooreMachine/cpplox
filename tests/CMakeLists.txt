@@ -1,16 +1,15 @@
 enable_testing()
 
 add_executable(
-        hello_test
+        cpplox_unittests
         hello_test.cpp
 )
 
 target_link_libraries(
-        hello_test
+        cpplox_unittests
         PRIVATE
-        scanner_test_lib
         gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(hello_test)
+gtest_discover_tests(cpplox_unittests)

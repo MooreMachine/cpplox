@@ -6,7 +6,16 @@ set(INCLUDE_DIRS
         ${PROJECT_SOURCE_DIR}/include
 )
 
+######################
+# Create the library #
+######################
+
 add_subdirectory(src)
+
+##################
+# Add unit tests #
+##################
+
 add_subdirectory(unittests)
 
 ############################################

@@ -8,3 +8,9 @@ set(INCLUDE_DIRS
 
 add_subdirectory(src)
 add_subdirectory(unittests)
+
+###########
+# Example #
+###########
+
+add_subdirectory(example ${CMAKE_BINARY_DIR}/examples/scanner EXCLUDE_FROM_ALL)

@@ -31,4 +31,14 @@ set_target_properties(cpplox PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_
 # Add other CMakeLists.txt files #
 ##################################
 
+#################
+# Our libraries #
+#################
+
+add_subdirectory(lib/scanner)
+
+#############
+# Our tests #
+#############
+
 add_subdirectory(tests)

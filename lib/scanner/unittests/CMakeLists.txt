@@ -25,6 +25,3 @@ set(TEST_LINK_LIBRARIES
 add_library(${LIB_NAME} ${TEST_FILES})
 target_include_directories(${LIB_NAME} PRIVATE ${INCLUDE_DIRS})
 target_link_libraries(${LIB_NAME} PRIVATE ${TEST_LINK_LIBRARIES})
-
-# include(GoogleTest)
-# gtest_discover_tests(${LIB_NAME})

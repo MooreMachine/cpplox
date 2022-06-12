@@ -1,7 +1,5 @@
 enable_testing()
 
-# add_subdirectory(${PROJECT_SOURCE_DIR}/lib/scanner/unittests ${CMAKE_BINARY_DIR}/unittests/scanner)
-
 add_executable(
         hello_test
         hello_test.cpp

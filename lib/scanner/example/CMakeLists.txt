@@ -5,7 +5,7 @@ set(EXECUTABLE_NAME scanner_example)
 ################
 
 set(SOURCE_FILES
-        scanner_main.cpp
+        scanner_example.cpp
 )
 
 ###############################
